@@ -6,8 +6,8 @@ Karnataka's RISC-V Skilled Workforce Powered by Samsung Semiconductor India Rese
 **Name:** Manish S  
 **College:** DAYANANDA SAGAR COLLEGE OF ENGINEERING 
 **Email ID:** manishs19022@gmail.com  
-**GitHub Profile:** [Manishs19022](https://github.com/maazm007?tab=repositories)  
-**LinkedIN Profile:** [Manish S](https://www.linkedin.com/in/maazms-ece-vlsi/)
+**GitHub Profile:** [Manishs19022](https://github.com/Manishs19022)  
+**LinkedIN Profile:** [Manish S](https://www.linkedin.com/in/manish-s-06a880261/)
 
 ----------------------------------------------------------------------------------------------------------------
 
