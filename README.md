@@ -10,22 +10,7 @@ Karnataka's RISC-V Skilled Workforce Powered by Samsung Semiconductor India Rese
 **LinkedIN Profile:** [Manish S](https://www.linkedin.com/in/manish-s-06a880261/)
 
 ----------------------------------------------------------------------------------------------------------------
-
-# FIRST TASK 
- Install this riscv tool chain on your machine. The labs related to first the above task will be shared over email. Complete this before the inauguration call on 6th Jan, 2025.
-
-![image](https://github.com/user-attachments/assets/14a488f3-d020-40d0-9284-a7e524d1ad50)
- and further steps are attached as pdf.
-
-<details>
-<summary><b>Task 1:</b> Task is to install all the essential tools required for this Program such as Ubuntu on VMBox </summary>   
-<br>
-
-**1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
-
-![Ubuntu and VMBox Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11c35aff-f587-40f5-a7d2-683dbf0784d4)
-
- #  INAUGURATION MEET
+##  INAUGURATION MEET
 Inauguration meet on 6th Jan,2025.
 Event Summary:
 
@@ -41,5 +26,22 @@ Here’s what makes this program a game-changer:
 I sincerely thank Samsung Semiconductor India Research and VLSI System Design for giving us this incredible opportunity to explore and excel. This initiative inspires innovation and builds a strong foundation for students to become leaders in the semiconductor industry.
 
 It’s an honour to contribute to this transformative mission and take a step toward becoming future RISC-V innovators.
+
+
+# FIRST TASK 
+ Install this riscv tool chain on your machine. The labs related to first the above task will be shared over email. Complete this before the inauguration call on 6th Jan, 2025.
+
+![image](https://github.com/user-attachments/assets/14a488f3-d020-40d0-9284-a7e524d1ad50)
+ and further steps are attached as pdf.
+
+<details>
+<summary><b>Task 1:</b> Task is to install all the essential tools required for this Program such as Ubuntu on VMBox </summary>   
+<br>
+
+**1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
+
+![Ubuntu and VMBox Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11c35aff-f587-40f5-a7d2-683dbf0784d4)
+
+
 
 
