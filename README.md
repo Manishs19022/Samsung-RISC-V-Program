@@ -5,7 +5,9 @@ Karnataka's RISC-V Skilled Workforce Powered by Samsung Semiconductor India Rese
 
 **Name:** Manish S  
 **College:** DAYANANDA SAGAR COLLEGE OF ENGINEERING 
-**Email ID:** manishs19022@gmail.com  
+
+**Email ID:** manishs19022@gmail.com
+**Phone :** 8867143816
 **GitHub Profile:** [Manishs19022](https://github.com/Manishs19022)  
 **LinkedIN Profile:** [Manish S](https://www.linkedin.com/in/manish-s-06a880261/)
 
@@ -32,6 +34,7 @@ It’s an honour to contribute to this transformative mission and take a step to
  Install this riscv tool chain on your machine. The labs related to first the above task will be shared over email. Complete this before the inauguration call on 6th Jan, 2025.
 
 ![image](https://github.com/user-attachments/assets/14a488f3-d020-40d0-9284-a7e524d1ad50)
+
  and further steps are attached as pdf.
 
 <details>
@@ -40,8 +43,9 @@ It’s an honour to contribute to this transformative mission and take a step to
 
 **1. Install Ubuntu 20.04 LTS on Oracle Virtual Machine Box**
 
-![Ubuntu and VMBox Installation](https://github.com/maazm007/vsdsquadron-mini-internship/assets/83294849/11c35aff-f587-40f5-a7d2-683dbf0784d4)
+![image](https://github.com/user-attachments/assets/817643ac-f806-4a34-8786-b82df2f8c123)
 
 
+![VirtualBox_vsdworkshop_07_01_2025_15_27_37](https://github.com/user-attachments/assets/a2f619ff-83cb-4bd5-916b-5b38c4d24181)
 
 
