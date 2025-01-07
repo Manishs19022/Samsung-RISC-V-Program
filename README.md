@@ -11,22 +11,6 @@ Karnataka's RISC-V Skilled Workforce Powered by Samsung Semiconductor India Rese
 
 ----------------------------------------------------------------------------------------------------------------
 
-<details>
-<summary><b>Task 1:</b> Task is to install all the essential tools required for this internship such as Ubuntu on VMBox, GNU Toolchain, GTKWave, Yosys and iVerilog simulator</summary>   
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
 # FIRST TASK 
  Install this riscv tool chain on your machine. The labs related to first the above task will be shared over email. Complete this before the inauguration call on 6th Jan, 2025.
 
