@@ -49,8 +49,9 @@ It’s an honour to contribute to this transformative mission and take a step to
 
 ![risc](https://github.com/user-attachments/assets/68059e43-e90e-4055-ae0a-a41eca6b8b4d)
 
-![c program ](https://github.com/user-attachments/assets/a18929e0-aa7f-4f95-bd1b-d218039019be)
+![image](https://github.com/user-attachments/assets/94142f25-b461-4f32-9cb6-ea314285bc2f)
 
 
-![C program ](https://github.com/user-attachments/assets/3bb04a6a-dac8-42c1-835f-812ed23fd317)
+![image](https://github.com/user-attachments/assets/312f05f9-1147-473a-a2b9-d05292c0b76d)
+
 
