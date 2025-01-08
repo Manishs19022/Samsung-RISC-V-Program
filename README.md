@@ -46,3 +46,11 @@ It’s an honour to contribute to this transformative mission and take a step to
 ![VirtualBox_vsdworkshop_07_01_2025_15_27_37](https://github.com/user-attachments/assets/a2f619ff-83cb-4bd5-916b-5b38c4d24181)
 
 
+
+![risc](https://github.com/user-attachments/assets/68059e43-e90e-4055-ae0a-a41eca6b8b4d)
+
+![c program ](https://github.com/user-attachments/assets/a18929e0-aa7f-4f95-bd1b-d218039019be)
+
+
+![C program ](https://github.com/user-attachments/assets/3bb04a6a-dac8-42c1-835f-812ed23fd317)
+
