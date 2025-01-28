@@ -71,8 +71,6 @@ result :
 ![c result ](https://github.com/user-attachments/assets/78b285ae-7b20-4409-acd1-4d8e9ebccf8c)
 
 
-![image](https://github.com/user-attachments/assets/312f05f9-1147-473a-a2b9-d05292c0b76d)
-
 # THIRD TASK
 
 RISCV Instruction types
