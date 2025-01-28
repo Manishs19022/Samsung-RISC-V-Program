@@ -207,7 +207,7 @@ imm[20|10:1|11|19:12] | rd | opcode
 
 ``000000110011001001 | 00001 | 1101111``
 
-4.ld a5,88(a0)
+2.ld a5,88(a0)
 -
 I-Type (Load, RV64I)
 
@@ -227,7 +227,7 @@ imm[11:0] | rs1 | funct3 | rd | opcode
 
 ``00000001011001010 |011 |   01111 |   0000011``
 
-5.jalr a5
+3.jalr a5
 -
 I-Type (Jump Register)
 
@@ -246,6 +246,40 @@ imm[11:0] | rs1 | funct3 | rd | opcode
 32 - bit-representation:
 
 ``00000000000001111 | 000  |   01111  | 1100111``
+4.sd a6, 80(sp)
+-
+S-Type Instruction
+
+- *imm[11:5]*	0000001
+
+- *rs2*	00110 (a6)
+
+- *rs1*	00001 (sp)
+
+- *funct3*	011 (sd)
+
+- *imm[4:0]*	01000
+
+- *opcode*	0100011
+
+32- bit representation:
+
+``00000010011000001 | 011 | 00001 | 0100011``
+
+5.lui a3, 0xffff
+-
+U-Type Instruction
+
+*imm[31:12]*	111111111111
+
+- *rd*	00011 (a3)
+
+- *opcode*	0110111
+
+32- bit representation:
+
+``111111111111 | 00011 | 0110111``
+
 
 6.srai s2,s2,0x3
 -
@@ -381,41 +415,8 @@ B-Type Instruction
 
 ``00001000101010001 | 001 | 00101 | 1100011``
 
-12.sd a6, 80(sp)
--
-S-Type Instruction
 
-- *imm[11:5]*	0000001
-
-- *rs2*	00110 (a6)
-
-- *rs1*	00001 (sp)
-
-- *funct3*	011 (sd)
-
-- *imm[4:0]*	01000
-
-- *opcode*	0100011
-
-32- bit representation:
-
-``00000010011000001 | 011 | 00001 | 0100011``
-
-13.lui a3, 0xffff
--
-U-Type Instruction
-
-*imm[31:12]*	111111111111
-
-- *rd*	00011 (a3)
-
-- *opcode*	0110111
-
-32- bit representation:
-
-``111111111111 | 00011 | 0110111``
-
-14.or a2, a4, -4(a4)
+12.or a2, a4, -4(a4)
 -
 R-Type Instruction
 
@@ -435,7 +436,7 @@ R-Type Instruction
 
 ``000000000100 | 00100 | 000 | 00010 | 0110011 ``
 
-15.lbu a2,-4(a4)
+13.lbu a2,-4(a4)
 -
 I-Type  Instruction:
 
@@ -453,7 +454,7 @@ I-Type  Instruction:
 
 ``111111111100 | 01000 | 100 | 00010 | 0000011``
 
-1 . addi sp,sp -32
+14 . addi sp,sp -32
 -
 I-Type Instruction
 
@@ -473,7 +474,7 @@ imm[11:0] | rs1 | funct3 | rd | opcode
 
 ``11111111111000010 |  000  |   00010 |  0010011``
 
-2.lw a5,12(sp)
+15.lw a5,12(sp)
 -
 I-Type Instruction
 
