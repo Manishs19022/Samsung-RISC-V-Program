@@ -51,6 +51,25 @@ It’s an honour to contribute to this transformative mission and take a step to
 
 ![image](https://github.com/user-attachments/assets/94142f25-b461-4f32-9cb6-ea314285bc2f)
 
+# SECOND TASK
+
+Write a program that gives the sum of n numbers using C in leafpad editor."sum1ton.c" is the filename
+
+ ![overleaf sum1ton](https://github.com/user-attachments/assets/9b683e34-7296-4785-889d-fc1b85038656)
+
+ After Compiling C code save ``ctrl+s`` and close the window ``ctrl+w`` 
+
+ Run the program and check the results using commands
+ ````
+gcc sum1ton.c
+./a.out 
+````
+./a.out is used for result
+
+result :
+
+![c result ](https://github.com/user-attachments/assets/78b285ae-7b20-4409-acd1-4d8e9ebccf8c)
+
 
 ![image](https://github.com/user-attachments/assets/312f05f9-1147-473a-a2b9-d05292c0b76d)
 
