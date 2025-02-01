@@ -973,3 +973,7 @@ int main(void) {
     }
 }
 ```
+
+# REFFERENCE 
+
+https://docs.cirkitdesigner.com/component/fba59254-fd55-44ac-b7e5-3f30f07ff53f/vsdsquadron-mini
