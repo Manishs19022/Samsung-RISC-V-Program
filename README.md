@@ -47,19 +47,23 @@ It’s an honour to contribute to this transformative mission and take a step to
 
 
 
-![risc](https://github.com/user-attachments/assets/68059e43-e90e-4055-ae0a-a41eca6b8b4d)
+ C-Based Lab
+ ----
+Install leafpad editor for C programming using command
 
-![image](https://github.com/user-attachments/assets/94142f25-b461-4f32-9cb6-ea314285bc2f)
-
-# SECOND TASK
+ ```
+         sudo apt  install leafpad
+ ```
+ ![install leafpad](https://github.com/user-attachments/assets/69a4702e-69e4-494d-8bb0-4a9f347eee5b)
 
 Write a program that gives the sum of n numbers using C in leafpad editor."sum1ton.c" is the filename
 
  ![overleaf sum1ton](https://github.com/user-attachments/assets/9b683e34-7296-4785-889d-fc1b85038656)
 
- After Compiling C code save ``ctrl+s`` and close the window ``ctrl+w`` 
 
- Run the program and check the results using commands
+
+
+  Run the program and check the results using commands
  ````
 gcc sum1ton.c
 ./a.out 
@@ -69,6 +73,74 @@ gcc sum1ton.c
 result :
 
 ![c result ](https://github.com/user-attachments/assets/78b285ae-7b20-4409-acd1-4d8e9ebccf8c)
+
+RISC -V Based Lab
+----
+Now we are compiling the same code in RISCV 
+compiling using command ```cat sum1ton.c```
+
+![risc1](https://github.com/user-attachments/assets/5e31f14d-e508-4d95-bd6d-167a52d6333a)
+
+For compiling the above C code in RISCV use command 
+```
+ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+```
+
+# SECOND TASK
+
+Spike Simulation:
+--------- 
+`Spike` is the official RISC-V ISA (Instruction Set Architecture) simulator. It allows developers to simulate RISC-V programs and applications, providing an environment to run, test, and debug code designed for RISC-V-based processors. Spike is commonly used in the context of development and research related to RISC-V architecture.
+
+`GCC (GNU Compiler Collection)` is a popular set of compilers that supports a variety of programming languages, including C and C++. In the context of RISC-V, GCC can be used to compile code for RISC-V targets, and Spike can then simulate the execution of that code on a virtual RISC-V machine.
+
+Now we use the command `spike pk sum1ton.o` give the output of the C code and verifies the instructions are correct
+
+![Screenshot from 2024-11-25 11-42-08](https://github.com/user-attachments/assets/e369d5bb-0bb3-4ec5-92a7-fdf1847afa2e)
+
+Debugg Assembly Language Program using ``spike -d pk sum1ton.o`` 
+
+Assembly Language Program :
+
+![assemblylang](https://github.com/user-attachments/assets/75bdb822-76cd-4b17-8913-4f573dcbfdd4)
+
+Debugger:
+
+![match sp](https://github.com/user-attachments/assets/1d6583a8-e92a-4ae1-a792-40461e99a1e4)
+
+-O1 and -Ofast 
+-
+
+The `-O1` and `-Ofast` options in the context of compiling C code with RISC-V (or any GCC-compatible compiler) control the level and type of optimizations applied during the compilation process
+
+In the case of `-O1` it  focus  A moderate level of optimization that aims to improve code performance while keeping compilation times and memory usage reasonable.
+
+In the case of `-Ofast` it focus  Aggressively optimizes for maximum performance, often at the expense of strict adherence to the language standard and longer compilation times.
+
+Application:
+--
+
+
+C-program using Leafpad :
+-
+![counterdown leafpad](https://github.com/user-attachments/assets/5eb13062-6041-481f-9971-946d5169e903)
+
+output of C code is :
+
+![c out counterdown](https://github.com/user-attachments/assets/9753cb5a-5902-45a3-959a-8a3c3c8ac925)
+
+compilation using gcc :
+
+![counterdown using gcc](https://github.com/user-attachments/assets/6c1c059b-38ec-45b6-98ee-10562faaaff7)
+
+Assembly Language program for the above C code: 
+
+
+![Assembly language counterdown](https://github.com/user-attachments/assets/e42643af-fc6c-4bcb-9d62-acd4bdd7d234)
+
+Debugging all the instructions in the Assembly language program using spike 
+
+![debug using spike](https://github.com/user-attachments/assets/421d1e4f-ab7c-42fe-8ca9-2897a80975da)
 
 
 # THIRD TASK
@@ -496,3 +568,408 @@ imm[11:0]  | rs1   | funct3 | rd    | opcode
 # FOURTH TASK 
 
 In this task, we will perform functional simulation of RISC-V instructions modeled as a Verilog netlist and observe the output waveforms
+
+Installing iverilog using command ``sudo apt install iverilog gtkwave``
+
+![iverilog install](https://github.com/user-attachments/assets/9450ad57-a250-4055-bdb8-511628e50a0a)
+
+1.``ADD R6, R2, R1``
+
+![add gtk](https://github.com/user-attachments/assets/19a0d4f4-a836-4880-8fbc-0b359449b384)
+
+2.``SUB R7, R1, R2``
+
+![sub gtkwave](https://github.com/user-attachments/assets/0aa6192b-4f81-4604-b09d-e1f1d7617324)
+
+3.``AND R8, R1, R3``
+
+![and gtkwave](https://github.com/user-attachments/assets/fac6962c-000a-4f88-b7ba-61d542f1087c)
+
+4.``OR R9, R2, R5``
+
+![or gtkwave](https://github.com/user-attachments/assets/f1bad13c-7453-48cf-b5c8-89fecd460315)
+
+5.``XOR R10, R1, R4``
+
+![xor gtkwave](https://github.com/user-attachments/assets/159a1b56-4811-4261-9102-7cf9d3819b69)
+
+
+
+# FIFTH TASK
+
+Countdown counter:
+--
+Countdown counter application is designed for an embedded system using a 4x4 matrix keypad and an I2C-based LCD display. It allows users to set a countdown timer in seconds, display the time remaining on the LCD.
+
+Users can input a countdown time (up to 4 digits, in seconds) using the numeric keys (0-9) on the keypad. After entering the desired countdown time, the user presses the` #` key to start the countdown.The LCD shows the time remaining in seconds, which updates every second during the countdown.Users can press the `*` key to reset the timer back to zero. The LCD will display a "Time reset" message.
+When the countdown reaches zero, the LCD displays "Time's Up!" to indicate that the timer has finished.After the countdown finishes, users can enter a new time for another countdown cycle. The system continuously waits for input.
+
+Components requried for Application:
+-
+1.VSDSquadron Mini
+
+2.4x4 Matrix keypad
+
+3.I2c Lcd display
+
+4.Jumper Wires
+
+5.VS Code 
+
+6.PlatformIO IDE
+
+Vsd_Squadronmini:
+--
+
+![image-removebg-preview (5)](https://github.com/user-attachments/assets/a63ce851-c985-4a77-88ce-3f7c9678e50d)
+
+Hardware connections:
+--
+## **Matrix Keypad Connections**
+
+| **Keypad Wire** | **Function** | **VSD Squadron Mini Pin** | **Description**       |
+|------------------|--------------|---------------------------|-----------------------|
+| Wire 8          | Row 1        | PD7                       | Connects to GPIO PD7  |
+| Wire 7          | Row 2        | PD2                       | Connects to GPIO PD2  |
+| Wire 6          | Row 3        | PD3                       | Connects to GPIO PD3  |
+| Wire 5          | Row 4        | PD4                       | Connects to GPIO PD4  |
+| Wire 4          | Column 1     | PC4                       | Connects to GPIO PC4  |
+| Wire 3          | Column 2     | PC5                       | Connects to GPIO PC5  |
+| Wire 2          | Column 3     | PC6                       | Connects to GPIO PC6  |
+| Wire 1          | Column 4     | PC7                       | Connects to GPIO PC7  |
+
+---
+
+## **I2C LCD Display Connections**
+
+| **Pin** | **Function**  | **VSD Squadron Mini Pin** | **Description**        |
+|---------|---------------|----------------------------|------------------------|
+| GND (1) | Ground        | GND                       | Ground connection      |
+| VCC (2) | Power         | 5V                        | Power supply (5V)      |
+| SDA (3) | I2C Data Line | PC1                       | Connects to GPIO PC1   |
+| SCL (4) | I2C Clock Line| PC2                       | Connects to GPIO PC2   |
+
+Circuit Diagram:
+--
+
+![countdown counter](https://github.com/user-attachments/assets/33100501-6150-45bd-a0d1-32319e365b23)
+
+
+
+Implemtation of Countdown Counter using Vsdsquadron-Mini , I2c Lcd display and Keypad    
+-
+
+Application overview :
+-
+-  keypad allows the user to input a 4-digit number for the countdown timer.
+-  When the user presses the # key, the 4-digit input is converted into a countdown value (in seconds), and the timer starts counting down , the remaining time is displayed on the LCD.
+-  User can press the * key at any time to restart the application, clearing the display and prompting the user to enter a new 4-digit countdown value.
+-  I2C protocol is used to control the LCD, allowing for clear and dynamic updates during the countdown process.
+
+Code:
+-
+
+ 
+```
+#include <ch32v00x.h>
+#include <ch32v00x_gpio.h>
+#include <stdio.h>  // For sprintf
+
+// Define Keypad pins
+#define R1 GPIO_Pin_5 // PD7
+#define R2 GPIO_Pin_2 // PD2
+#define R3 GPIO_Pin_3 // PD3
+#define R4 GPIO_Pin_4 // PD4
+#define C1 GPIO_Pin_4 // PC4
+#define C2 GPIO_Pin_5 // PC5
+#define C3 GPIO_Pin_6 // PC6
+#define C4 GPIO_Pin_7 // PC7
+
+// Onboard LED pin (PD6)
+#define LED_PIN GPIO_Pin_6
+
+// Define the SDA and SCL Pins for I2C Communication
+#define SDA_PIN GPIO_Pin_1
+#define SCL_PIN GPIO_Pin_2
+
+// LCD I2C Address
+#define LCD_Address 0x27
+
+// Function Prototypes
+void GPIO_INIT(void);
+char keypad_get_key(void);
+void delay_ms(uint32_t ms);
+void i2c_start(void);
+void i2c_stop(void);
+void i2c_write(unsigned char data);
+void i2c_ACK(void);
+void lcd_send_cmd(unsigned char cmd);
+void lcd_send_data(unsigned char data);
+void lcd_send_string(const char *str);
+void lcd_init(void);
+void restart_application(void);
+
+// GPIO Initialization for Keypad and LCD
+void GPIO_INIT(void) {
+    GPIO_InitTypeDef GPIO_InitStructure;
+
+    // Enable clocks for GPIO ports C and D
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD, ENABLE);
+
+    // Initialize rows (R1-R4 on PD) as output
+    GPIO_InitStructure.GPIO_Pin = R1 | R2 | R3 | R4;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Initialize columns (C1-C4 on PC) as input pull-up
+    GPIO_InitStructure.GPIO_Pin = C1 | C2 | C3 | C4;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    // Initialize LED pin (PD6) as output push-pull
+    GPIO_InitStructure.GPIO_Pin = LED_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Initialize I2C Pins
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = SDA_PIN | SCL_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    // Initialize LCD
+    lcd_init();
+}
+
+// Delay Function
+void delay_ms(uint32_t ms) {
+    while (ms--) {
+        for (uint32_t i = 0; i < 4000; i++) {
+            __NOP(); // No operation, just a delay
+        }
+    }
+}
+
+// Keypad scan function
+char keypad_get_key(void) {
+    const char keys[4][4] = {
+        {'1', '2', '3', 'A'},
+        {'4', '5', '6', 'B'},
+        {'7', '8', '9', 'C'},
+        {'*', '0', '#', 'D'}
+    };
+
+    // Row pins array
+    GPIO_TypeDef* row_ports[] = {GPIOD, GPIOD, GPIOD, GPIOD};
+    uint16_t rows[] = {R1, R2, R3, R4};
+
+    // Column pins array
+    GPIO_TypeDef* col_ports[] = {GPIOC, GPIOC, GPIOC, GPIOC};
+    uint16_t cols[] = {C1, C2, C3, C4};
+
+    // Scan rows
+    for (int row = 0; row < 4; row++) {
+        // Set all rows high
+        for (int r = 0; r < 4; r++) {
+            GPIO_WriteBit(row_ports[r], rows[r], Bit_SET);
+        }
+
+        // Pull current row low
+        GPIO_WriteBit(row_ports[row], rows[row], Bit_RESET);
+
+        // Check each column
+        for (int col = 0; col < 4; col++) {
+            if (GPIO_ReadInputDataBit(col_ports[col], cols[col]) == RESET) {
+                return keys[row][col]; // Return pressed key
+            }
+        }
+    }
+    return '\0'; // No key pressed
+}
+
+// I2C Start Condition
+void i2c_start(void) {
+    GPIO_SetBits(GPIOC, SDA_PIN);
+    GPIO_SetBits(GPIOC, SCL_PIN);
+    delay_ms(1);
+    GPIO_ResetBits(GPIOC, SDA_PIN);
+    delay_ms(1);
+    GPIO_ResetBits(GPIOC, SCL_PIN);
+    delay_ms(1);
+}
+
+// I2C Stop Condition
+void i2c_stop(void) {
+    GPIO_ResetBits(GPIOC, SDA_PIN);
+    delay_ms(1);
+    GPIO_SetBits(GPIOC, SCL_PIN);
+    delay_ms(1);
+    GPIO_SetBits(GPIOC, SDA_PIN);
+    delay_ms(1);
+}
+
+// I2C Write Byte
+void i2c_write(unsigned char data) {
+    for (int i = 0; i < 8; i++) {
+        if (data & 0x80) {
+            GPIO_SetBits(GPIOC, SDA_PIN);
+        } else {
+            GPIO_ResetBits(GPIOC, SDA_PIN);
+        }
+        delay_ms(1);
+        GPIO_SetBits(GPIOC, SCL_PIN);
+        delay_ms(1);
+        GPIO_ResetBits(GPIOC, SCL_PIN);
+        data <<= 1;
+    }
+    // Release SDA for ACK
+    GPIO_SetBits(GPIOC, SDA_PIN);
+    delay_ms(1);
+    GPIO_SetBits(GPIOC, SCL_PIN);
+    delay_ms(1);
+    GPIO_ResetBits(GPIOC, SCL_PIN);
+    delay_ms(1);
+}
+
+// LCD Initialization
+void lcd_init(void) {
+    lcd_send_cmd(0x02); // Initialize in 4-bit mode
+    lcd_send_cmd(0x28); // Function set: 4-bit, 2 lines, 5x7 font
+    lcd_send_cmd(0x0C); // Display ON, Cursor OFF
+    lcd_send_cmd(0x06); // Entry mode set: Increment cursor
+    lcd_send_cmd(0x01); // Clear display
+    delay_ms(20);       // Wait for the clear command
+}
+
+// Send Command to LCD
+void lcd_send_cmd(unsigned char cmd) {
+    unsigned char cmd_u = (cmd & 0xF0);
+    unsigned char cmd_l = ((cmd << 4) & 0xF0);
+
+    i2c_start();
+    i2c_write(LCD_Address << 1);
+    i2c_write(cmd_u | 0x0C); // Enable, RS = 0
+    i2c_write(cmd_u | 0x08); // Disable, RS = 0
+    i2c_write(cmd_l | 0x0C); // Enable, RS = 0
+    i2c_write(cmd_l | 0x08); // Disable, RS = 0
+    i2c_stop();
+    delay_ms(2);
+}
+
+// Send Data to LCD
+void lcd_send_data(unsigned char data) {
+    unsigned char data_u = (data & 0xF0);
+    unsigned char data_l = ((data << 4) & 0xF0);
+
+    i2c_start();
+    i2c_write(LCD_Address << 1);
+    i2c_write(data_u | 0x0D); // Enable, RS = 1
+    i2c_write(data_u | 0x09); // Disable, RS = 1
+    i2c_write(data_l | 0x0D); // Enable, RS = 1
+    i2c_write(data_l | 0x09); // Disable, RS = 1
+    i2c_stop();
+    delay_ms(2);
+}
+
+// Send String to LCD
+void lcd_send_string(const char *str) {
+    while (*str) {
+        lcd_send_data(*str++);
+    }
+}
+
+// Restart Application
+void restart_application(void) {
+    // Reinitialize all GPIOs and LCD
+    GPIO_INIT();
+
+    // Clear the digits array
+    char digits[4] = {' ', ' ', ' ', ' '};
+
+    lcd_send_cmd(0x80); // Move cursor to first row, first column
+    lcd_send_string("Start Timer!");
+    delay_ms(2000);  // Display for 2 seconds
+
+    lcd_send_cmd(0x80); // Move cursor to first row, first column
+    lcd_send_string("Enter 4 Digits:");
+}
+
+// Main Function
+int main(void) {
+    GPIO_INIT();
+
+    lcd_send_cmd(0x80); // Move cursor to first row, first column
+    lcd_send_string("Start Timer!");
+
+    delay_ms(2000);  // Display for 2 seconds
+
+    lcd_send_cmd(0x80); // Move cursor to first row, first column
+    lcd_send_string("Enter 4 Digits:");
+
+    char digits[4] = {' ', ' ', ' ', ' '};  // Array to store the last 4 digits
+    int digit_count = 0;
+
+    while (1) {
+        char key = keypad_get_key();
+
+        // If any key is pressed
+        if (key != '\0') {
+            // If # is pressed, convert the digits to integer and count down
+            if (key == '#') {
+                // Convert the digits array to an integer
+                int num = (digits[0] - '0') * 1000 + (digits[1] - '0') * 100 + 
+                          (digits[2] - '0') * 10 + (digits[3] - '0');
+
+                // Countdown from the number to 0
+                for (int i = num; i >= 0; i--) {
+                    if (i == 0) {
+                        lcd_send_cmd(0xC0); // Move cursor to second row
+                        lcd_send_string("Time left: 0 sec");
+                        delay_ms(500);  // Wait before updating the LCD
+                        lcd_send_cmd(0x01); // Clear display
+                        lcd_send_cmd(0x80); // Move cursor to top row
+                        lcd_send_string("Time's Up!");
+                        delay_ms(2000);  // Display "Time's Up!" for 2 seconds
+                        // Clear display
+                        lcd_send_cmd(0x01); // Clear display
+                        // Show restart message
+                        lcd_send_cmd(0x80); // Move cursor to top row
+                        lcd_send_string("* to restart");
+                        break;
+                    } else {
+                        char buffer[16];
+                        sprintf(buffer, "Time left:%d sec", i); // Format countdown as "Time left: <value> sec"
+                        lcd_send_cmd(0xC0); // Move cursor to second row
+                        lcd_send_string(buffer);
+                        delay_ms(500);  // Wait before updating the LCD
+                        lcd_send_cmd(0x01); // Clear display
+                    }
+                }
+            } else {
+                // Shift the digits to the left and add the new key
+                for (int i = 0; i < 3; i++) {
+                    digits[i] = digits[i + 1];
+                }
+                digits[3] = key;
+
+                // Display the digits on the LCD
+                lcd_send_cmd(0xC0); // Move cursor to second row
+                lcd_send_data(digits[0]);
+                lcd_send_data(digits[1]);
+                lcd_send_data(digits[2]);
+                lcd_send_data(digits[3]);
+
+                delay_ms(200);  // Small delay to avoid bouncing
+            }
+        }
+
+        // Check for "*" to restart
+        if (key == '*') {
+            restart_application();
+        }
+    }
+}
+```
